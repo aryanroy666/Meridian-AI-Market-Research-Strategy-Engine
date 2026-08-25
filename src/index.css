@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+  /* Fonts */
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+
+  /* Light theme */
+  --color-paper: #f7f7f7;
+  --color-paper-dim: #eeeeee;
+
+  --color-surface: #ffffff;
+
+  --color-ink: #171923;
+  --color-ink-soft: #394052;
+  --color-ink-muted: #687185;
+
+  /* Primary */
+  --color-navy: #0757c9;
+  --color-navy-soft: #eaf2ff;
+  --color-navy-line: #b9cbed;
+
+  /* Accent */
+  --color-gold: #b65a16;
+  --color-gold-soft: #d97732;
+  --color-gold-dim: #fff1e7;
+
+  /* Borders */
+  --color-line: #d1d5db;
+
+  /* Status */
+  --color-good: #19734a;
+  --color-warn: #a66a00;
+  --color-bad: #b42318;
+}
+
+
+/* --------------------------------
+   Global styles
+-------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* --------------------------------
+   Text selection
+-------------------------------- */
+
+::selection {
+  background: var(--color-gold-dim);
+  color: var(--color-ink);
+}
+
+
+/* --------------------------------
+   Scrollbar
+-------------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+  border: 2px solid var(--color-paper);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aeb4bd;
+}
+
+
+/* --------------------------------
+   Dark theme
+-------------------------------- */
+
+.dark {
+  --color-paper: #111312;
+  --color-surface: #181B1A;
+  --color-input: #1B1E1D;
+
+  --color-line: #2B302E;
+
+  --color-ink: #F2F4F3;
+  --color-ink-soft: #A8AFAC;
+  --color-ink-muted: #747C78;
+
+  --color-navy: #5B8DEF;
+  --color-navy-soft: #24344F;
+  --color-navy-line: #34445E;
+
+  --color-gold: #D6A15C;
+  --color-gold-soft: #E0B77D;
+}
+
+
+/* Dark scrollbar */
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #454545;
+}
+
+
+/* --------------------------------
+   Loading shimmer
+-------------------------------- */
+
+.shimmer-line {
+  background: linear-gradient(90deg,
+      #e9e9e9 0%,
+      #f5f5f5 20%,
+      #e9e9e9 40%);
+
+  background-size: 800px 100%;
+  animation: shimmer 2.4s linear infinite;
+}
+
+
+/* --------------------------------
+   Grain texture
+-------------------------------- */
+
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
