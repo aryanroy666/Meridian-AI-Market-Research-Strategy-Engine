@@ -83,7 +83,7 @@ export default function Signup() {
             required
             autoComplete="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setFullName(e.target.value)}
             placeholder="you@company.com"
             className="w-full rounded-md border border-[#d9d7d0] bg-white px-3.5 py-2.5 text-sm text-[#171717] outline-none transition placeholder:text-[#999999] focus:border-[#171717] focus:ring-2 focus:ring-[#171717]/5"
           />
