@@ -78,13 +78,14 @@ export default function Signup() {
           <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-muted">
             Full name
           </label>
+
           <input
-            type="email"
+            type="text"
             required
-            autoComplete="email"
-            value={email}
+            autoComplete="name"
+            value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            placeholder="you@company.com"
+            placeholder="Your full name"
             className="w-full rounded-md border border-[#d9d7d0] bg-white px-3.5 py-2.5 text-sm text-[#171717] outline-none transition placeholder:text-[#999999] focus:border-[#171717] focus:ring-2 focus:ring-[#171717]/5"
           />
         </div>
@@ -92,6 +93,7 @@ export default function Signup() {
           <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-muted">
             Email
           </label>
+
           <input
             type="email"
             required
