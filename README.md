@@ -66,7 +66,7 @@ The result is served through a McKinsey-styled web dashboard, where the user wat
 
 **Multi-agent pipeline**
 
-Seven purpose-built agents — Planner, Research, Extraction, Validation, Citation, Report, Linker — each with one job, chained into a single fail-fast pipeline.
+Seven purpose-built agents → Planner, Research, Extraction, Validation, Citation, Report, Linker. Each with one job, chained into a single fail-fast pipeline.
 
 </td>
 <td width="33%" valign="top">
@@ -80,7 +80,7 @@ Full Supabase Auth with server-verified JWTs, not a demo gate. Every research jo
 
 **Full traceability**
 
-Every key finding in the final report links back to the exact evidence and web source that supports it — nothing is asserted without a citation trail.
+Every key finding in the final report links back to the exact evidence and web source that supports it. Nothing is asserted without a citation trail.
 
 </td>
 </tr>
@@ -489,7 +489,7 @@ The app will be live at `http://localhost:5173`.
 
 <div align="center">
 
-**This repository represents the final, deployed state of the Meridian AI Market Research & Strategy Engine** — a working, end-to-end multi-agent research application spanning authentication, a seven-stage AI pipeline, full evidence traceability, and a polished consulting-styled UI.
+**This repository represents the final, deployed state of the Meridian AI Market Research & Strategy Engine**, a working, end-to-end multi-agent research application spanning authentication, a seven-stage AI pipeline, full evidence traceability, and a polished consulting-styled UI.
 
 <br/>
 
