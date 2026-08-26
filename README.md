@@ -1,6 +1,7 @@
 <div align="center">
 
-# Meridian AI Market Research & Strategy Engine
+# Meridian 
+# AI Market Research & Strategy Engine
 
 ### An autonomous multi-agent system that turns a research brief into a fully cited, consulting-grade market report
 
