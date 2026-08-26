@@ -489,7 +489,7 @@ The app will be live at `http://localhost:5173`.
 
 <div align="center">
 
-**This repository represents the final, deployed state of the McKinsey AI Market Research & Strategy Engine** — a working, end-to-end multi-agent research application spanning authentication, a seven-stage AI pipeline, full evidence traceability, and a polished consulting-styled UI.
+**This repository represents the final, deployed state of the Meridian AI Market Research & Strategy Engine** — a working, end-to-end multi-agent research application spanning authentication, a seven-stage AI pipeline, full evidence traceability, and a polished consulting-styled UI.
 
 <br/>
 
