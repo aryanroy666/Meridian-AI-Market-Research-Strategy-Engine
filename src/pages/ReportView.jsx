@@ -16,6 +16,10 @@ import Shell from "../components/Shell";
 import StatusBadge from "../components/StatusBadge";
 import { api, ApiError } from "../api/client";
 
+
+import { useTheme } from "../context/ThemeContext";
+
+
 const SECTIONS = [
   { key: "key_findings", title: "Key findings", icon: Lightbulb },
   { key: "market_signals", title: "Market signals", icon: Radar },
@@ -60,6 +64,9 @@ function ReportSection({ title, icon: Icon, items }) {
 export default function ReportView() {
   const { jobId } = useParams();
   const navigate = useNavigate();
+
+  const { theme, toggleTheme } = useTheme();
+
 
   const [job, setJob] = useState(null);
   const [report, setReport] = useState(null);
@@ -244,9 +251,9 @@ export default function ReportView() {
                       </p>
                     )}
                     <div className="mt-3 flex flex-wrap items-center gap-2 font-mono text-[10px] uppercase tracking-wide text-ink-muted">
-                      {e.status && <span className="rounded-full bg-paper-dim px-2 py-0.5">{e.status}</span>}
+                      {e.status && <span className="rounded-full bg-paper-dim text-[11px] font-medium px-2 py-0.5">{e.status}</span>}
                       {typeof e.confidence === "number" && (
-                        <span className="rounded-full bg-paper-dim px-2 py-0.5">
+                        <span className={`rounded-full text-[11px] font-medium bg-paper-dim px-2 py-0.5 ${theme == "dark" ? "text-[#323232]" : "text-ink"} `}>
                           Confidence {(e.confidence * 100).toFixed(0)}%
                         </span>
                       )}
@@ -255,7 +262,7 @@ export default function ReportView() {
                           href={sourceById[e.source_id].url}
                           target="_blank"
                           rel="noreferrer"
-                          className="rounded-full bg-paper-dim px-2 py-0.5 text-navy hover:underline"
+                          className="rounded-full  bg-surface px-2 py-0.5  text-blue-500 hover:underline"
                         >
                           {sourceById[e.source_id].title || "Source"}
                         </a>

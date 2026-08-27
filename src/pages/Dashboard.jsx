@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 
 const PROMPTS = [
-  "Placement rate at AlmaBetter: Myth, magic, or measurable metric",
+  "The impact of generative AI on student critical thinking skills.",
   "Emerging demand signals in the residential solar storage market",
   "What is the student placement rate at AlmaBetter, and how does it compare to Hogwarts graduates?",
   "Student placement rate and career outcomes at AlmaBetter compared to other edtech platforms in India."
@@ -112,7 +112,7 @@ export default function Dashboard() {
               <div className="flex items-center justify-between px-3 pb-2 pt-1">
                 <div className="flex items-center gap-1.5 text-xs text-ink-muted">
                   <Sparkles size={13} className="text-gold" />
-                  Planner &middot; Researcher &middot; Validator &middot; Report agent
+                  Planner &middot; Researcher &middot; Validator &middot; Report
                 </div>
 
                 <motion.button

@@ -19,7 +19,7 @@ export default function Footer() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
-      className="border-t border-line bg-paper"
+      className="border-t border-line bg-paper mt-8"
     >
       <div className="mx-auto flex  max-w-6xl flex-col items-center gap-6 px-6 py-7 sm:px-8 md:flex-row md:items-center md:justify-between">
 

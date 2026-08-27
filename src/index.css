@@ -73,10 +73,14 @@ body {
 -------------------------------- */
 
 ::selection {
-  background: var(--color-gold-dim);
-  color: var(--color-ink);
+  background: #d6c2a3;
+  color: #171717;
 }
 
+.dark ::selection {
+  background: #4a4035;
+  color: #f3f3f3;
+}
 
 /* --------------------------------
    Scrollbar
