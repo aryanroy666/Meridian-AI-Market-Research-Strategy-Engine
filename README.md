@@ -269,10 +269,9 @@ Nine ordered migrations build the schema incrementally:
 | 005 | Validation Records | `validation_records` |
 | 006 | Memory | `memory_records` — `pgvector` column for future semantic search |
 | 007 | Reports | `reports` |
-| 008 | Feedback | `feedback` |
-| 009 | Indexes | Indexes on `evidence.job_id`, `planner_tasks.job_id`, and an `ivfflat` vector index on `memory_records.embedding` |
+| 008 | Indexes | Indexes on `evidence.job_id`, `planner_tasks.job_id`, and an `ivfflat` vector index on `memory_records.embedding` |
 
-`research_jobs.created_by` and `feedback.reviewer_id` both reference `auth.users(id)`, tying every record directly to a Supabase Auth identity — this is what makes per-user data isolation possible.
+`research_jobs.created_by` reference `auth.users(id)`, tying every record directly to a Supabase Auth identity — this is what makes per-user data isolation possible.
 
 ### Backend Environment Variables
 
