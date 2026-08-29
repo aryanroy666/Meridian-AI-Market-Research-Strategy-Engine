@@ -219,8 +219,7 @@ backend/
 ├── api/
 │   ├── research.py             # Create + inspect research jobs (the core workflow)
 │   ├── reports.py              # Fetch generated reports
-│   ├── evidence.py              # Fetch raw evidence records
-│   └── feedback.py               # Reviewer feedback on reports
+│   └── evidence.py              # Fetch raw evidence records
 ├── repositories/                # One repository per table — all Supabase reads/writes
 ├── services/
 │   └── research_service.py       # Bridges the API layer to the AI pipeline
