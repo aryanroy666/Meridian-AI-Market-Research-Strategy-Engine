@@ -606,12 +606,12 @@ End-to-end run time depends on the seven-stage pipeline's calls to Gemini and Ta
 | Member | Role |
 |---|---|
 | **Aryan Roy** (GR) | Frontend & UX/UI |
-| **Deepak Chauhan** | Auth & API communication; deployment & user journey |
-| **Vikram Kumar R.** | Backend & API layer; deployment & user journey |
-| **Prajwal Girade** | AI agents 1–3 (Planning · Research · Extraction) |
-| **Priyanshu Singh** | AI agents 4–5 (Validation · Citation) |
-| **Aditya Tyagi** | AI agents 6–7 (Report · Linker) |
-| **Shashank Meshram** | Database & persistence |
+| **Deepak Chauhan** | Auth & API communication |
+| **Vikram Kumar R.** | Backend & API Layer |
+| **Prajwal Girade** | AI agents 1–3 (Planning Agent, Research Agent, Extraction Agent) |
+| **Priyanshu Singh** | AI agents 4–5 (Validation Agent, Citation Agent) |
+| **Aditya Tyagi** | AI agents 6–7 (Report Agent, Linker Agent) |
+| **Shashank Meshram** | Database & Persistence |
 
 </div>
 
