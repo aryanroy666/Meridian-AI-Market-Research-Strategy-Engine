@@ -29,9 +29,9 @@ Thanks for taking the time to contribute. This doc covers how to get set up, how
 
 ## Before You Start
 
-- For anything beyond a small fix, open an issue first describing what you want to change and why — it's a lot easier to align on approach before code is written than after.
-- Check [Known Limitations](../README.md#known-limitations) and [Future Improvements](../README.md#future-improvements) in the main README — your idea might already be tracked there, or might explain a design decision that looks like a bug but isn't.
-- Security issues should **not** go through a public issue or PR — see [SECURITY.md](../SECURITY.md).
+- For anything beyond a small fix, open an issue first describing what you want to change and why. It's a lot easier to align on approach before code is written than after.
+- Check [Known Limitations](../README.md#known-limitations) and [Future Improvements](../README.md#future-improvements) in the main README. Your idea might already be tracked there, or might explain a design decision that looks like a bug but isn't.
+- Security issues should **not** go through a public issue or PR, see [SECURITY.md](../SECURITY.md).
 
 <br/>
 
