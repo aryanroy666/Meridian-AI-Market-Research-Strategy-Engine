@@ -31,7 +31,6 @@
 - [Business Problem](#business-problem)
 - [Product Goal](#product-goal)
 - [Highlights](#highlights)
-- [Screenshots](#screenshots)
 - [System Architecture](#system-architecture)
 - [The Multi-Agent Research Pipeline](#the-multi-agent-research-pipeline)
 - [Backend — FastAPI Service](#backend--fastapi-service)
@@ -116,29 +115,6 @@ Every key finding in the final report links back to the exact evidence and web s
 
 <br/>
 
-## Screenshots
-
-<div align="center">
-
-**Dashboard — start a new research brief**
-
-<img src="docs/screenshots/dashboard.png" width="800" />
-
-<br/><br/>
-
-**Research progress — the seven pipeline stages animating live**
-
-<img src="docs/screenshots/research-progress.png" width="800" />
-
-<br/><br/>
-
-**Report view — synthesized findings, each one citation-backed**
-
-<img src="docs/screenshots/report-view.png" width="800" />
-
-</div>
-
-<br/>
 
 ## System Architecture
 
