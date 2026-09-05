@@ -555,7 +555,7 @@ Reliability is built into the pipeline itself rather than checked afterward:
 
 End-to-end run time depends on the seven-stage pipeline's calls to Gemini and Tavily, so it varies with upstream API load rather than being fixed:
 
-| Scenario | Typical run time |
+| Scenario | Runtime |
 |---|:---:|
 | Best Case | 45secs – 55secs |
 | Typical Case | 1min – 1min 30secs |
