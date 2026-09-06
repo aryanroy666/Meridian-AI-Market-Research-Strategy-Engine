@@ -11,7 +11,7 @@
 
 <br/>
 
-> **Honesty upfront:** there is no automated test suite in this repository today. This doc covers how to manually verify the system now, and lays out a concrete, low-effort way to start adding automated tests — it's a starting point, not a description of existing coverage.
+> **Honesty upfront:** there is no automated test suite in this repository today. This doc covers how to manually verify the system now, and lays out a concrete, low-effort way to start adding automated tests. It is a starting point, not a description of existing coverage.
 
 <br/>
 
@@ -35,13 +35,13 @@
 | Frontend (React components, routing) | None | Click through the app manually per the checklist below |
 | Database migrations | None | Run migrations against a fresh Supabase project and confirm no errors |
 
-This lines up with [Evaluation & Reliability](EVALUATION.md) — reliability today comes from the pipeline's own structural checks (validation stage, fail-fast behavior), not from a test suite that verifies the code itself.
+This lines up with [Evaluation & Reliability](EVALUATION.md). Reliability today comes from the pipeline's own structural checks (validation stage, fail-fast behavior), not from a test suite that verifies the code itself.
 
 <br/>
 
 ## Manual Verification (What Exists Today)
 
-This is the same checklist from [Getting the Project Running Locally](../README.md#getting-the-project-running-locally) — run it after any nontrivial change:
+This is the same checklist from [Getting the Project Running Locally](../README.md#getting-the-project-running-locally). Run it after any nontrivial change:
 
 1. Sign up for a new account through the frontend.
 2. Submit a test research brief and confirm the progress screen runs through to completion.
@@ -54,10 +54,10 @@ This is the same checklist from [Getting the Project Running Locally](../README.
 
 Adding a full test suite all at once is a big lift. A more realistic path:
 
-1. **Start with the backend's pure logic** — things like the Citation Builder or Report Linker's linking logic are the easiest to unit test, since they transform typed data without needing a live LLM or web search call.
-2. **Add one integration test for the happy path** — a single test that runs `POST /api/research/` against a mocked LLM/search response and asserts a `completed` job comes back with a report. This catches "the pipeline is completely broken" regressions cheaply.
-3. **Add auth tests next** — confirm a request with no token gets `401`, and a request for another user's job gets `403`. These are cheap to write and protect the most security-sensitive behavior in the app.
-4. **Frontend tests last** — component and route tests matter, but they're lower-risk to skip initially since a broken UI is usually caught immediately in manual use, unlike a silent backend regression.
+1. **Start with the backend's pure logic**: things like the Citation Builder or Report Linker's linking logic are the easiest to unit test, since they transform typed data without needing a live LLM or web search call.
+2. **Add one integration test for the happy path**: a single test that runs `POST /api/research/` against a mocked LLM/search response and asserts a `completed` job comes back with a report. This catches "the pipeline is completely broken" regressions cheaply.
+3. **Add auth tests next**: confirm a request with no token gets `401`, and a request for another user's job gets `403`. These are cheap to write and protect the most security-sensitive behavior in the app.
+4. **Frontend tests last**: component and route tests matter, but they're lower-risk to skip initially since a broken UI is usually caught immediately in manual use, unlike a silent backend regression.
 
 <br/>
 
@@ -69,7 +69,7 @@ Adding a full test suite all at once is a big lift. A more realistic path:
 | Report Linker | Given a report and evidence, every key finding gets a citation link | Unit test with fixture data |
 | Auth dependency (`get_current_user`) | Missing/invalid token → `401`; valid token → user injected | Unit test with a mocked Supabase client |
 | Ownership check (`_ensure_owner`) | Non-owner request → `403` | Unit test with two fixture users |
-| Full pipeline (`research_pipeline.py`) | A brief produces a `completed` job with all sub-resources populated | Integration test with mocked Gemini/Tavily calls — **do not hit real APIs in CI** |
+| Full pipeline (`research_pipeline.py`) | A brief produces a `completed` job with all sub-resources populated | Integration test with mocked Gemini/Tavily calls. **Do not hit real APIs in CI** |
 | Fail-fast behavior | An empty result at any stage marks the job `failed`, not silently continues | Integration test forcing an empty return from one stage |
 
 <br/>
@@ -90,7 +90,7 @@ Adding a full test suite all at once is a big lift. A more realistic path:
 The pipeline's dependency on real, paid external APIs (Gemini, Tavily) makes it a poor fit for hitting them directly in automated tests. Recommended pattern:
 
 - Mock `ai/llm/gemini.py` and `ai/browser/tavily_search.py` at the boundary in tests, returning fixed fixture responses.
-- The repo already has `mock_search.py` as an offline fallback for the Research agent — that's a natural seam to reuse for test fixtures rather than building a second mocking layer.
+- The repo already has `mock_search.py` as an offline fallback for the Research agent and that is a natural seam to reuse for test fixtures rather than building a second mocking layer.
 - Keep a small, fixed set of fixture briefs (e.g. one that should clearly succeed, one designed to produce low-confidence evidence) so pipeline behavior can be checked deterministically. This overlaps with the "benchmark briefs" idea in [ROADMAP.md](ROADMAP.md#automated-report-evaluation).
 
 <br/>
@@ -103,5 +103,5 @@ The pipeline's dependency on real, paid external APIs (Gemini, Tavily) makes it 
 | Frontend | `vitest` (pairs naturally with Vite), `@testing-library/react` |
 | CI | GitHub Actions workflow running both suites on every PR |
 
-None of this is installed yet — treat this table as a starting shopping list, not a claim about the current `requirements.txt` / `package.json`.
+None of this is installed yet. Treat this table as a starting shopping list, not a claim about the current `requirements.txt` / `package.json`.
 
