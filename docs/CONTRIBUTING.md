@@ -29,15 +29,15 @@ Thanks for taking the time to contribute. This doc covers how to get set up, how
 
 ## Before You Start
 
-- For anything beyond a small fix, open an issue first describing what you want to change and why — it's a lot easier to align on approach before code is written than after.
-- Check [Known Limitations](../README.md#known-limitations) and [Future Improvements](../README.md#future-improvements) in the main README — your idea might already be tracked there, or might explain a design decision that looks like a bug but isn't.
-- Security issues should **not** go through a public issue or PR — see [SECURITY.md](../SECURITY.md).
+- For anything beyond a small fix, open an issue first describing what you want to change and why, so it is a lot easier to align on approach before code is written than after.
+- Check [Known Limitations](../README.md#known-limitations) and [Future Improvements](../README.md#future-improvements) in the main README. Your idea might already be tracked there, or might explain a design decision that looks like a bug but isn't.
+- Security issues should **not** go through a public issue or PR, see [SECURITY.md](../SECURITY.md).
 
 <br/>
 
 ## Local Setup
 
-Full step-by-step instructions already live in [Getting the Project Running Locally](../README.md#getting-the-project-running-locally) — that's the source of truth. In short:
+Full step-by-step instructions already live in [Getting the Project Running Locally](../README.md#getting-the-project-running-locally). That is the source of truth. In short:
 
 1. Fork the repo and clone your fork.
 2. Set up Supabase and run the migrations (`backend/db/migrations/001` → `009`).
@@ -63,7 +63,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for how these pieces relate, and the fold
 ## Branching
 
 - Branch off `main`.
-- Prefix branches by what they do: `feat/`, `fix/`, `docs/`, `refactor/`, `chore/` — e.g. `feat/streamed-pipeline-status`, `fix/report-linker-null-source`.
+- Prefix branches by what they do: `feat/`, `fix/`, `docs/`, `refactor/`, `chore/`. E.g. `feat/streamed-pipeline-status`, `fix/report-linker-null-source`.
 - Keep branches scoped to one change. A PR that mixes a bug fix with an unrelated refactor is harder to review and harder to revert if something goes wrong.
 
 <br/>
@@ -109,10 +109,10 @@ In the PR description, include:
 
 | You want to... | Look at |
 |---|---|
-| Change what a pipeline stage does | `ai/<stage>/` in the backend — see [The Multi-Agent Research Pipeline](../README.md#the-multi-agent-research-pipeline) |
-| Add or change an API route | `backend/api/` — update [API.md](API.md) to match |
-| Add a new page or route to the UI | `src/pages/` and `src/App.jsx` in the frontend — update the [Routing Map](../README.md#routing-map) |
-| Change the database schema | Add a new numbered migration under `backend/db/migrations/` — never edit an existing one that's already been applied anywhere |
+| Change what a pipeline stage does | `ai/<stage>/` in the backend, see [The Multi-Agent Research Pipeline](../README.md#the-multi-agent-research-pipeline) |
+| Add or change an API route | `backend/api/`. Update [API.md](API.md) to match |
+| Add a new page or route to the UI | `src/pages/` and `src/App.jsx` in the frontend. Update the [Routing Map](../README.md#routing-map) |
+| Change the database schema | Add a new numbered migration under `backend/db/migrations/`. Never edit an existing one that's already been applied anywhere |
 | Change deployment steps | [DEPLOYMENT.md](DEPLOYMENT.md) |
 
 <br/>
@@ -129,5 +129,5 @@ Open a GitHub issue with:
 
 ## Proposing Features
 
-Open a GitHub issue describing the problem the feature solves, not just the feature itself — it's easier to evaluate "analysts want to compare two reports side by side" than "add a compare button." If it's related to something already listed under [Future Improvements](../README.md#future-improvements), reference that so discussion builds on existing context instead of starting over.
+Open a GitHub issue describing the problem the feature solves, not just the feature itself. It's easier to evaluate "analysts want to compare two reports side by side" than "add a compare button." If it's related to something already listed under [Future Improvements](../README.md#future-improvements), reference that so discussion builds on existing context instead of starting over.
 
