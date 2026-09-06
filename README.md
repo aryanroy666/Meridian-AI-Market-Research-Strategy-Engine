@@ -589,6 +589,8 @@ End-to-end run time depends on the seven-stage pipeline's calls to Gemini and Ta
 | **Aditya Tyagi** | AI agents 6-7 (Report Agent, Linker Agent) |
 | **Shashank Meshram** | Database & Persistence |
 
+All contributors were involved across development, testing, documentation, and refinement throughout the project.
+
 </div>
 
 <br/>
