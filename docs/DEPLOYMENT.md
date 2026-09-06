@@ -55,14 +55,14 @@ Do this once, before deploying either half:
 2. In the SQL editor, run every file in `backend/db/migrations/` in numeric order (`001` → `009`). This builds the full schema, including the `pgvector` extension and its indexes.
 3. From **Project Settings → API**, copy:
    - The **Project URL**
-   - The **anon/public key** — this goes to the frontend only
-   - The **service_role key** — this goes to the backend only, and must never reach the browser
+   - The **anon/public key** : this goes to the frontend only
+   - The **service_role key** : this goes to the backend only, and must never reach the browser
 
 <br/>
 
 ## 2. Deploy the Backend
 
-The backend is a standard FastAPI app (`backend/main.py`), deployable to any platform that runs a long-lived Python process — Render, Railway, and Fly.io are all straightforward fits.
+The backend is a standard FastAPI app (`backend/main.py`), deployable to any platform that runs a long-lived Python process: Render, Railway, and Fly.io are all straightforward fits.
 
 **Environment variables to set on the platform:**
 
@@ -70,8 +70,8 @@ The backend is a standard FastAPI app (`backend/main.py`), deployable to any pla
 GOOGLE_API_KEY=          # Gemini API key
 TAVILY_API_KEY=          # Tavily web search API key
 SUPABASE_URL=https://your-project-ref.supabase.co
-SUPABASE_KEY=            # SERVICE ROLE key — backend only
-CORS_ORIGINS=            # comma-separated list — added in step 4 below
+SUPABASE_KEY=            # SERVICE ROLE key (backend only)
+CORS_ORIGINS=            # comma-separated list; added in step 4 below
 ```
 
 **Start command** (adjust the port to whatever your platform expects):
@@ -80,13 +80,13 @@ CORS_ORIGINS=            # comma-separated list — added in step 4 below
 uvicorn backend.main:app --host 0.0.0.0 --port $PORT
 ```
 
-Once live, confirm `https://<your-backend-url>/health` returns a healthy response before moving on — this is the same endpoint uptime monitors should point at long-term.
+Once live, confirm `https://<your-backend-url>/health` returns a healthy response before moving on. This is the same endpoint uptime monitors should point at long-term.
 
 <br/>
 
 ## 3. Deploy the Frontend
 
-The repo already includes a `vercel.json`, so Vercel is the path of least resistance — though any static host that can run a Vite build works.
+The repo already includes a `vercel.json`, so Vercel is the path of least resistance. Though any static host that can run a Vite build works.
 
 **On Vercel:**
 
@@ -95,7 +95,7 @@ The repo already includes a `vercel.json`, so Vercel is the path of least resist
 
 ```env
 VITE_SUPABASE_URL=https://your-project-ref.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-public-key   # anon key only — never the service role key
+VITE_SUPABASE_ANON_KEY=your-anon-public-key   # anon key only. never the service role key.
 VITE_API_BASE_URL=https://your-backend-url
 ```
 
@@ -111,7 +111,7 @@ The backend rejects cross-origin requests from any domain not explicitly listed.
 CORS_ORIGINS=https://your-frontend-url.vercel.app
 ```
 
-Redeploy the backend after changing this — most platforms require a restart to pick up new environment variables.
+Redeploy the backend after changing this as most platforms require a restart to pick up new environment variables.
 
 <br/>
 
@@ -122,7 +122,7 @@ Same checklist as local verification, run against the live URLs:
 1. Open the deployed frontend and sign up for a new account.
 2. Submit a test research brief and confirm the progress screen runs to completion.
 3. Confirm the completed job produces a report with populated Report, Evidence, and Sources tabs.
-4. Check the backend logs for the request — confirm the bearer token was verified and no CORS errors were thrown.
+4. Check the backend logs for the request. Confirm the bearer token was verified and no CORS errors were thrown.
 
 <br/>
 
@@ -130,10 +130,10 @@ Same checklist as local verification, run against the live URLs:
 
 | Change | What to do |
 |---|---|
-| Frontend code only | Push to the connected branch — Vercel redeploys automatically |
-| Backend code only | Push to the connected branch/repo on your backend platform, or trigger a manual deploy |
-| New environment variable | Update it on the platform's dashboard, then redeploy that service — env var changes are not picked up by a running process |
-| New database migration | Run the new `backend/db/migrations/` file manually against Supabase's SQL editor; migrations are not applied automatically on deploy |
+| Frontend code only | Push to the connected branch. Vercel redeploys automatically. |
+| Backend code only | Push to the connected branch/repo on your backend platform, or trigger a manual deploy. |
+| New environment variable | Update it on the platform's dashboard, then redeploy that service. env var changes are not picked up by a running process. |
+| New database migration | Run the new `backend/db/migrations/` file manually against Supabase's SQL editor; migrations are not applied automatically on deploy. |
 
 <br/>
 
