@@ -2,7 +2,7 @@
 
 # Security Policy
 
-### Meridian — AI Market Research & Strategy Engine
+### Meridian - AI Market Research & Strategy Engine
 
 <img src="https://img.shields.io/badge/auth-Supabase_JWT-3ecf8e?style=for-the-badge&labelColor=1a1a1a" />
 <img src="https://img.shields.io/badge/disclosure-responsible-BA7517?style=for-the-badge&labelColor=1a1a1a" />
