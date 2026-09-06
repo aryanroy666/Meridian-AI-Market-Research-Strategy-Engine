@@ -2,7 +2,7 @@
 
 # Roadmap
 
-### Where Meridian is headed next
+### Where Meridian is headed next?
 
 <img src="https://img.shields.io/badge/status-living_document-BA7517?style=for-the-badge&labelColor=1a1a1a" />
 
@@ -10,7 +10,7 @@
 
 <br/>
 
-> This expands on [Future Improvements](../README.md#future-improvements) in the main README with rough priority and status. Nothing here is a commitment or a deadline — it's a shared view of what's worth doing next, meant to be edited as priorities shift.
+> This expands on [Future Improvements](../README.md#future-improvements) in the main README with rough priority and status. Nothing here is a commitment or a deadline. It's a shared view of what's worth doing next, meant to be edited as priorities shift.
 
 <br/>
 
@@ -44,7 +44,7 @@
 | ⚪ Later | Exportable reports (PDF / shareable link) | User-facing convenience, not a current gap |
 | ⚪ Later | Automated report evaluation (citation coverage, hallucination checks) | [Evaluation & Reliability — where this is headed](EVALUATION.md#where-this-is-headed) |
 
-> All items currently sit at ⚪ **Later** — none are actively in progress yet. Move an item up as work actually starts on it.
+> All items currently sit at ⚪ **Later**. None are actively in progress yet. Move an item up as work actually starts on it.
 
 <br/>
 
@@ -60,10 +60,10 @@ Add a second LLM provider that the Planner, Extraction, Validation, and Report a
 The `pgvector`-backed `memory_records` table already exists in the schema (migration `006`) but isn't read from or written to yet. Wiring it up would let a new brief benefit from related past research instead of starting from zero every time.
 
 ### Exportable reports
-Let a user download a completed report as a PDF, or generate a read-only shareable link — useful for anyone who wants to hand a report to someone without a Meridian account.
+Let a user download a completed report as a PDF, or generate a read-only shareable link, which is useful for anyone who wants to hand a report to someone without a Meridian account.
 
 ### Automated report evaluation
-A lightweight eval pass — checking citation coverage and spot-checking for unsupported claims — run against every report before it's marked `completed`, rather than relying solely on the Validation agent's own in-pipeline judgment. See [EVALUATION.md](EVALUATION.md) for the full reliability picture this would add to.
+A lightweight eval pass, checking citation coverage and spot-checking for unsupported claims. It is run against every report before it's marked `completed`, rather than relying solely on the Validation agent's own in-pipeline judgment. See [EVALUATION.md](EVALUATION.md) for the full reliability picture this would add to.
 
 <br/>
 
@@ -82,5 +82,5 @@ Smaller or less-fleshed-out ideas, parked here rather than in the main table unt
 When an item moves forward:
 1. Update its status in the [Now / Next / Later](#now--next--later) table.
 2. If it ships, remove it from here and add it to [CHANGELOG.md](CHANGELOG.md) under the release it landed in.
-3. If a new idea comes up, add it to [Ideas Not Yet Prioritized](#ideas-not-yet-prioritized) first — promote it to the main table once there's a clearer sense of what it actually involves.
+3. If a new idea comes up, add it to [Ideas Not Yet Prioritized](#ideas-not-yet-prioritized) first, promote it to the main table once there's a clearer sense of what it actually involves.
 
