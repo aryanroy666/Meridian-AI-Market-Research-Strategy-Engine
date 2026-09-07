@@ -78,7 +78,7 @@ If your report involves an exposed secret (an API key committed to the repo, a l
 
 ## What We Ask You Not to Do
 
-- Don't run automated scanners against the live deployment ([the demo](../README.md#live-demo)) without checking in first. The backend has no rate limiting of its own (see [API.md](API.md#rate-limits--timeouts)), and heavy scanning could exhaust the Gemini/Tavily quota shared by real users.
+- Don't run automated scanners against the live deployment without checking in first. The backend has no rate limiting of its own (see [API.md](API.md#rate-limits--timeouts)), and heavy scanning could exhaust the Gemini/Tavily quota shared by real users.
 - Don't access, modify, or exfiltrate another user's data beyond the minimum needed to demonstrate the issue.
 - Don't publicly disclose a vulnerability before it's been addressed or a reasonable amount of time has passed with no response.
 
