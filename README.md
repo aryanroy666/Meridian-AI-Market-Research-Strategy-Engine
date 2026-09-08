@@ -595,6 +595,25 @@ All contributors were involved across development, testing, documentation, and r
 
 <br/>
 
+## Screenshots
+
+### Dashboard & Dark Mode
+A consulting-grade workspace with a navy-and-gold dark theme built for long research sessions.
+
+<img src="screenshots/Dark Mode.png" alt="Meridian Dashboard and Dark Mode" width="700">
+
+### Research Progress
+Seven specialized AI agents plan, search, extract, validate, cite, and report in real time.
+
+<img src="screenshots/Research Progress.png" alt="Meridian Research Progress" width="700">
+
+### Report View
+Every finding is backed by evidence, every claim is cited, and every source carries a transparent confidence score.
+
+<img src="screenshots/Report Findings.png" alt="Meridian Report View" width="700">
+
+<br/>
+
 ## Project Status
 
 <div align="center">
