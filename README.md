@@ -49,6 +49,7 @@
 - [Performance Metrics](#performance-metrics)
 - [Future Improvements](#future-improvements)
 - [Team Contributions](#team-contributions)
+- [Screenshots](#screenshots)
 - [Project Status](#project-status)
 
 <br/>
