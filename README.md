@@ -1,5 +1,9 @@
 <div align="center">
 
+<p align="center">
+  <img src="frontend/public/Meridian Logo.png" alt="Meridian Logo" width="100">
+</p>
+
 # Meridian - AI Market Research & Strategy Engine
 
 ### An autonomous multi-agent system that turns a research brief into a fully cited, consulting-grade market report
