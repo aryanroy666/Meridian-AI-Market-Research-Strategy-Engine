@@ -1,7 +1,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="frontend/public/Meridian Logo.png" alt="Meridian Logo" width="100">
+  <img src="frontend/public/Meridian Logo.png" alt="Meridian Logo" width="110">
 </p>
 
 # Meridian - AI Market Research & Strategy Engine
